@@ -8,7 +8,7 @@ fun main() {
 
     val doc = Jsoup.connect(url).get()
 
-    val citations = doc.select("#__next > div > section > div.sc-1vlzmga-2.dzxAnh > div:nth-child(1)")
+    val citations = doc.select("article")
 
     for (citation in citations) {
         println(citation.text())
